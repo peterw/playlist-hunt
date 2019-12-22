@@ -1,13 +1,20 @@
 const express = require("express");
 const os = require("os");
+const fs = require("fs"); 
 
 const app = express();
 
 app.use(express.static("dist"));
+app.use(express.static("public"));
 
-app.get("/lol", (req, res) => {
-    res.send("hello")
+app.get("/api/lol", (req, res) => {
+    fs.readFile('./public/playlists.json', 'utf8', function(err, contents) {
+      if (err) throw err;
+      let parsedJson = JSON.parse(contents);
+      res.send({content: parsedJson});
+    });
 })
+
 app.get("/api/getUsername", (req, res) =>
   res.send({ username: os.userInfo().username })
 );
