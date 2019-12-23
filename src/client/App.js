@@ -10,7 +10,7 @@ class Home extends React.Component {
     };
   }
   getAllPlaylists() {
-    fetch("/api/lol")
+    fetch("/api/getAllPlaylists")
       .then(response => response.json())
       .then(tables => this.setState({ table_dates: tables.content }));
     console.log(this.state.table_dates);
