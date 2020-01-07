@@ -26,7 +26,7 @@ class Home extends React.Component {
             <span className="flex font-bold text-4xl"> PLAYLIST Hunt 🎶</span>
             <span className="flex text-xl"> Find your next favorite playlist. </span>
           </div>
-          <img className="h-1/2 rounded-lg shadow-md" src="/public/music_cover.jpg" />
+          <img className="h-1/2 rounded-lg shadow-md" src="/music_cover.jpg" />
         </div>
         <span className="text-xl text-center"> *Updated daily (hopefully!)*</span>
 
