@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./app.css";
+import PlayLists from "../../public/playlists.json"
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      table_dates: []
+      table_dates: PlayLists
     };
   }
   getAllPlaylists() {
@@ -26,7 +27,7 @@ class Home extends React.Component {
             <span className="flex font-bold text-4xl"> PLAYLIST Hunt 🎶</span>
             <span className="flex text-xl"> Find your next favorite playlist. </span>
           </div>
-          <img className="h-1/2 rounded-lg shadow-md" src="/music_cover.jpg" />
+          <img className="h-1/2 rounded-lg shadow-md" src="https://i.imgur.com/Z4DWxln.jpg" />
         </div>
         <span className="text-xl text-center"> *Updated daily (hopefully!)*</span>
 
